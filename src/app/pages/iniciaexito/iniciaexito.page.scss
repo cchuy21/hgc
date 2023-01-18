@@ -1,0 +1,25 @@
+.title{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: Center;
+    font-family: 'Chuck';
+}
+
+.text-a{
+    font-family: 'Other';
+    font-weight: bold;
+}
+
+.text-b{
+    font-family: 'Other';
+    text-align: center;
+    font-weight: bold;
+}
+
+.zoom{
+   transition: 2s;
+}
+
+p:hover{
+    font-size: 20pt;
+}

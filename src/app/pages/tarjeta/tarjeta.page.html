@@ -1,0 +1,125 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-buttons slot="end">
+            <ion-menu-button autoHide="false"></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            <img src="{{ img }}" alt="" width="120px">
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="background1">
+    <br>
+    <ion-grid>
+        <ion-row>
+            <ion-col class='title pt24'>
+                Pago con Tarjeta
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <br><br>
+    <ion-grid>
+        <ion-item>
+            <ion-label position="stacked">Num. de tarjeta</ion-label>
+            <ion-input minlength="16" maxlength="16" [(ngModel)]="tokenParams.card.number"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="stacked">Nombre del Titular</ion-label>
+            <ion-input [(ngModel)]="tokenParams.card.name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="stacked">Teléfono</ion-label>
+            <ion-input minlength="10" maxlength="10" [(ngModel)]="telef"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="stacked">Mes de Expiración</ion-label>
+            <ion-select placeholder="Mes de Expiración" [(ngModel)]="tokenParams.card.exp_month">
+                <ion-select-option value="01">Enero</ion-select-option>
+                <ion-select-option value="02">Febrero</ion-select-option>
+                <ion-select-option value="03">Marzo</ion-select-option>
+                <ion-select-option value="04">Abril</ion-select-option>
+                <ion-select-option value="05">Mayo</ion-select-option>
+                <ion-select-option value="06">Junio</ion-select-option>
+                <ion-select-option value="07">Julio</ion-select-option>
+                <ion-select-option value="08">Agosto</ion-select-option>
+                <ion-select-option value="09">Semptiembre</ion-select-option>
+                <ion-select-option value="10">Octubre</ion-select-option>
+                <ion-select-option value="11">Noviembre</ion-select-option>
+                <ion-select-option value="12">Diciembre</ion-select-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label position="stacked">Año de Expiración</ion-label>
+            <ion-select placeholder="Año de Expiración" [(ngModel)]="tokenParams.card.exp_year">
+                <ion-select-option *ngFor="let year of years" [value]="year">{{year}}</ion-select-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label position="stacked">CVV</ion-label>
+            <ion-input minlength="3" maxlength="4" [(ngModel)]="tokenParams.card.cvc"></ion-input>
+        </ion-item>
+    </ion-grid>
+    <ion-grid>
+        <ion-item>
+            <ion-label position="stacked">Calle y Numero</ion-label>
+            <ion-input [(ngModel)]="tokenParams.card.address.street1"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="stacked">Colonia</ion-label>
+            <ion-input [(ngModel)]="tokenParams.card.address.street2"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="stacked">Municipio</ion-label>
+            <ion-input [(ngModel)]="tokenParams.card.address.city"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="stacked">Estado</ion-label>
+            <ion-input [(ngModel)]="tokenParams.card.address.state"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="stacked">Código Postal</ion-label>
+            <ion-input [(ngModel)]="tokenParams.card.address.zip"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="stacked">País</ion-label>
+            <ion-select [(ngModel)]="tokenParams.card.address.country">
+                <ion-select-option selected value="Mexico">México</ion-select-option>
+            </ion-select>
+        </ion-item>
+    </ion-grid>
+</ion-content>
+<ion-footer>
+    <ion-toolbar>
+        <ion-button fill="outline" shape="round" expand="block" (click)="validar()">Siguiente</ion-button>
+    </ion-toolbar>
+</ion-footer>
+<!--
+<ion-footer>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button (click)="navigate2('inicio')">
+      <ion-icon name="home"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button (click)="navigate2('carrito')">
+      <ion-icon name="cart-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button (click)="navigate2('busqueda')">
+      <ion-icon name="search"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button (click)="navigate2('favoritos')">
+      <ion-icon name="heart"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button (click)="letra(-1)">
+      <ion-icon name="remove-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button (click)="letra(1)">
+      <ion-icon name="add-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button (click)="logout()">
+      <ion-icon name="log-out"></ion-icon>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-footer>-->

@@ -1,0 +1,106 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-buttons slot="end">
+            <ion-menu-button autoHide="false"></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            <img src="{{ img }}" alt="" width="120px">
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+<!--ejecituva-->
+<ion-content padding class="background1">
+    <div class="title pt18">
+        ¿QUIÉNES SOMOS?
+    </div>
+    <ion-list>
+        <ion-card>
+            <img src="../../../assets/images/HGC_EMPRESIMG.jpg" alt="">
+
+            <ion-card-header>
+                <ion-card-title class="text-b pt15">CONOCE HGC</ion-card-title>
+            </ion-card-header>
+            <ion-card-content class="text-a pt12">
+                Informarte y vincularte al mundo de posibilidades que HGC Nutrición Natural te brinda es la mejor manera de comenzar tu camino hacia el éxito, para que así puedas dar el mejor servicio y atención en recomendación de productos Alimenticios y Cosmetológicos
+                de alto valor agregado para que puedas abrir las puertas a donde quiera que vayas a ofrecer tus productos y tu servicio te tenemos que dar la llave maestra: La Ética, la cual es la razón de ser de este manual y por lo que pensamos en que
+                conocieras más de esta palabra y de su uso en nuestra empresa. Por lo pronto recibe nuestra más cordial bienvenida y conoce nuestra Misión, Visión y Valores.
+            </ion-card-content>
+        </ion-card>
+        <ion-card>
+            <ion-card-header>
+                <ion-card-title class="text-b pt15">Bienvenidos a nuestra gran familia</ion-card-title>
+            </ion-card-header>
+            <ion-card-content class="text-a pt12">
+                HGC es un corporativo con calidad empresarial y humana que te ofrece el inicio de tu independencia económica. Es nuestro objetivo formar personas autosuficientes económicamente, mediante la obtención de nuevos conocimientos y actitudes que les permitan
+                generar su propia riqueza y prosperidad. Para ser parte de HGC lo único que necesitas es tener sueños, metas, deseos de superación, pero sobre todo un espíritu emprendedor.
+            </ion-card-content>
+        </ion-card>
+        <ion-card>
+            <ion-card-header>
+                <ion-card-title class="text-b pt15">MISIÓN</ion-card-title>
+            </ion-card-header>
+            <ion-card-content class="text-a pt12">
+                Ser una empresa comprometida con el cuidado de la salud, que es el don más preciado de todo individuo y distinguirnos mediante la calidad de nuestros productos hechos a base de ingredientes 100% naturales y brindar a las personas la posibilidad de obtener
+                ingresos extras o que formen su propio negocio al hacerlos participes de la distribución de nuestros productos al capacitarlos como distribuidores independientes en mercadeo en redes.
+            </ion-card-content>
+        </ion-card>
+        <ion-card>
+            <ion-card-header>
+                <ion-card-title class="text-b pt15">VISIÓN 2017-2020</ion-card-title>
+            </ion-card-header>
+            <ion-card-content class="text-a pt12">
+                Ser una empresa reconocida y preferida por usuarios de suplementos alimenticios. Llegar a ser el proveedor número uno en México y consolidar la apertura del mercado en Estados Unidos de América por medio de: liderazgo, capacitación constante de nuestro
+                personal y la alta calidad de nuestros productos.
+            </ion-card-content>
+        </ion-card>
+        <ion-card>
+            <ion-card-header>
+                <ion-card-title class="text-b pt15">VALORES</ion-card-title>
+            </ion-card-header>
+            <ion-card-content class="text-a pt12">
+                En HGC consideramos los siguientes valores indispensables para el crecimiento de la empresa:
+                <ul>
+                    <li>Lealtad</li>
+                    <li>Dedicación</li>
+                    <li>Equidad</li>
+                    <li>Respeto</li>
+                    <li>Trabajo en Equipo</li>
+                    <li>Responsabilidad</li>
+                </ul>
+            </ion-card-content>
+        </ion-card>
+
+    </ion-list>
+</ion-content>
+
+
+<ion-tab-bar slot="bottom">
+    <ion-tab-button (click)="navigate2('inicio')">
+        <ion-icon name="home"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button *ngIf="log==1" (click)="navigate2('carrito')">
+        <img *ngIf="user.tipo==2" src="../../../assets/images/rosa/FRONT/HGC_RZAPATILLA.png" style="width: 100%; max-width: 35px;" alt="">
+        <ion-icon *ngIf="user.tipo!=2" name="cart-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button *ngIf="log==1" (click)="navigate2('busqueda')">
+        <ion-icon name="search"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button *ngIf="log==1" (click)="navigate2('favoritos')">
+        <ion-icon name="heart"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button (click)="letra(-1)">
+        <ion-icon name="remove-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button (click)="letra(1)">
+        <ion-icon name="add-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button *ngIf="log" (click)="abrirlibro()">
+        <ion-icon name="book-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button *ngIf="log" (click)="logout()">
+        <ion-icon name="log-out"></ion-icon>
+    </ion-tab-button>
+</ion-tab-bar>

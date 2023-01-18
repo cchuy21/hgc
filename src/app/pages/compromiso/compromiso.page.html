@@ -1,0 +1,77 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-buttons slot="end">
+            <ion-menu-button autoHide="false"></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            <img src="{{ img }}" alt="" width="120px">
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content padding class="background1">
+    <br>
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <img [src]="'../../../assets/images/'+ngtipo+'/HGC_GLOSARIOLINEA2.png'" alt="" width="100%" style="float:left;margin-top: 15px;transform: rotate(180deg);">
+            </ion-col>
+            <ion-col class='title pt24'>
+                &nbsp;&nbsp;&nbsp;Negocios HGC&nbsp;&nbsp;&nbsp;
+            </ion-col>
+            <ion-col>
+                <img [src]="'../../../assets/images/'+ngtipo+'/HGC_GLOSARIOLINEA2.png'" alt="" width="100%" style="float:right;margin-top: 15px;">
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <br /><br />
+    <div>
+        <ion-list>
+            <ion-card>
+                <img src="../../../assets/images/ejecutiva/empresaynegocio/escuela/HGC_10AIMG1.jpg" alt="">
+                <ion-card-header>
+                    <ion-card-title class="text-b pt15">Más de una década nos respaldan</ion-card-title>
+                </ion-card-header>
+
+                <ion-card-content class="text-a pt13">
+
+                    HGC es una empresa mexicana fundada en el año 2009 de una idea guiada por la pasión y el esfuerzo de un grupo de emprendedores, que se desarrolla y crece día a día con el compromiso y el trabajo de todos los que forman parte de ella, desde sus inicios
+                    hasta el día de hoy HGC Nutrición Natural y toda su GRAN Familia de colaboradores se destacan por su gran nivel, capacidad, calidad empresarial y humana, por ser una empresa comprometida con el cuidado de tu nutrición y el bienestar
+                    de tu familia. Impulsados por personas normales con un sueño igual al tuyo, con grandes anhelos y sobre todo un espíritu emprendedor. Ha pasado mas de 1 decada de su fundación y el día de hoy están muy orgullosos del camino recorrido
+                    pues su gran familia ha crecido, desarrollado y caminado a su lado; los han acompañado a la conquista y a la apertura de los centros de distribución en Estados Unidos, en la fundación del edificio corporativo en la Ciudad de Aguascalientes,
+                    un Cedis matriz en CDMX y otra subsede en Guerrero.<br /> Además nuestros líderes se han destacado y han llegado a ser desde grado Esmeralda hasta Diamante Rosa teniendo como resultado en la mayoria de ellos mejores
+                    ingresos, viajes, autos, premios pero sobre todo la satisfacción de encontrar en HGC una mejor calidad de vida.
+                </ion-card-content>
+            </ion-card>
+        </ion-list>
+    </div>
+</ion-content>
+<ion-tab-bar slot="bottom">
+    <ion-tab-button (click)="navigate2('inicio')">
+        <ion-icon name="home"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button *ngIf="log==1" (click)="navigate2('carrito')">
+        <img *ngIf="user.tipo==2" src="../../../assets/images/rosa/FRONT/HGC_RZAPATILLA.png" style="width: 100%; max-width: 35px;" alt="">
+        <ion-icon *ngIf="user.tipo!=2" name="cart-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button *ngIf="log==1" (click)="navigate2('busqueda')">
+        <ion-icon name="search"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button *ngIf="log==1" (click)="navigate2('favoritos')">
+        <ion-icon name="heart"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button (click)="letra(-1)">
+        <ion-icon name="remove-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button (click)="letra(1)">
+        <ion-icon name="add-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button *ngIf="log" (click)="abrirlibro()">
+        <ion-icon name="book-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button *ngIf="log" (click)="logout()">
+        <ion-icon name="log-out"></ion-icon>
+    </ion-tab-button>
+</ion-tab-bar>

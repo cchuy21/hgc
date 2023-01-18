@@ -1,0 +1,50 @@
+
+
+.code{
+  --background:transparent;
+  margin-right: 20px;
+  margin-left: 20px;
+  font-family: 'Other';
+}
+
+#container {
+  text-align: center;
+  font-family: 'Other';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+ion-tab-bar,.backv{
+  display: none;
+}
+.backa{
+  display: none;
+}
+#container strong {
+  line-height: 26px;
+}
+
+#container p {
+  line-height: 22px;
+  color: #8c8c8c;
+  margin: 0;
+}
+
+#container a {
+  text-decoration: underline;
+  color: black;
+  font-weight: bold;
+
+}
+
+.boton{
+  margin-top: 60px;
+  font-family: 'Chuck';
+}
+
+ion-tab-bar{
+  display: none!important;
+}
+

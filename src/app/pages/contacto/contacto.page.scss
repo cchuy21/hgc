@@ -1,0 +1,62 @@
+
+.title{
+    text-align: Center;
+    font-family: 'Chuck';
+    text-align: center;
+}
+
+.text-a{
+    font-family: 'Other';
+    font-weight: bold;
+    text-align: center;
+}
+
+.text-b{
+    font-family: 'Other';
+    text-align: justify;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+.text-c{
+    font-family: 'Other';
+    text-align: justify;
+    font-size: 10pt;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-style: italic;
+    
+}
+
+.fondo{
+    background-color:#a1a1a1;
+}
+
+.img-pad{
+    padding: 20px;
+    align-items: center;
+}
+
+#map{
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+    transition: opacity 150ms ease-in;
+    display: block;
+    &.show-map{
+      opacity: 1;
+    }
+}
+
+
+#map2{
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+    transition: opacity 150ms ease-in;
+    display: block;
+    &.show-map2{
+      opacity: 1;
+    }
+}

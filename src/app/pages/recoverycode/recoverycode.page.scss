@@ -1,0 +1,32 @@
+
+ion-title{
+    font-family: 'Other';
+}
+#container {
+    text-align: center;
+    font-family: 'Other';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 30%;
+    transform: translateY(-50%);
+}
+
+.code{
+    --background:transparent;
+    margin-right: 20px;
+    margin-left: 20px;
+    font-family: 'Other';
+    font-size: 14pt;
+}
+
+ion-text{
+    font-size: 16pt;
+    text-align: center;
+}
+
+#salir{
+    float: right;
+    margin-top: 500px;
+    padding-right: 25px;
+}

@@ -1,0 +1,128 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <img src="{{ img }}" alt="" width="120px">
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!--ejecituva-->
+<ion-content *ngIf="user.tipo" padding class="background1">
+  <br>
+  <div>
+    <img src="../../assets/images/negocio/interior/inicia/HGC_NEGOTITULO.png" alt="">
+    <img src="../../assets/images/negocio/interior/inicia/HGC_NEGOIMAGEN1.jpg" alt="">
+    <div class="img-tr">
+      <img src="../../assets/images/negocio/interior/inicia/HGC_NEGOBOTONBIENVE.png" alt="" (click)="navigate('iniciaexito')">
+    </div>
+  </div>
+  <br>
+  <div>
+    <img src="../../assets/images/negocio/interior/funciona/HGC_NEGOTITULO.png" alt="">
+    <img src="../../assets/images/negocio/interior/funciona/HGC_NEGOIMAGEN2.jpg" alt="">
+    <div class="img-tr">
+      <img src="../../assets/images/negocio/interior/funciona/HGC_NEGOBOTONELMEJOR.png" alt="" (click)="navigate('funciona')">
+    </div> 
+  </div>
+  <br>
+  <div>
+    <img src="../../assets/images/negociod/interior/grados/HGC_GRADODTITULO.png" alt="">
+    <img src="../../assets/images/negociod/interior/grados/HGC_GRADOSIMG.jpg" alt="">
+    <div class="img-tr">
+      <img src="../../assets/images/negociod/interior/grados/HGC_GRADODBOTON.png" alt="" (click)="navigate('grados')">
+    </div>
+  </div>
+  <br>
+  <br>
+  <div>
+    <img src="../../assets/images/negociod/interior/premios/HGC_REUNDTITULO.png" alt="">
+    <img src="../../assets/images/negociod/interior/premios/HGC_REUNIMG.jpg" alt="">
+    <div class="img-tr">
+      <img src="../../assets/images/negociod/interior/premios/HGC_REUNDBOTON.png" alt=""  (click)="navigate('premios')">
+    </div>
+  </div>
+  <br>
+  <div>
+    <img src="../../assets/images/negocio/interior/negocio/HGC_NEGOTITULO.png" alt="">
+    <img src="../../assets/images/negocio/interior/negocio/HGC_NEGOIMAGEN5.jpg" alt="">
+    <div class="img-tr">
+      <img src="../../assets/images/negocio/interior/negocio/HGC_NEGOBOTONLOMEJOR.png" alt=""  (click)="navigate('escuela')">
+    </div>
+  </div>
+  <br>
+</ion-content>
+<!--deportiva-->
+<ion-content *ngIf="!user.tipo" padding class="background1">
+  <br>
+  <div>
+    <img src="../../assets/images/negociod/interior/inicia/HGC_NEGOTITULO1.png" alt="">
+    <img src="../../assets/images/negociod/interior/inicia/HGC_NEGOIMAGEN1.jpg" alt="">
+    <div class="img-tr">
+      <img src="../../assets/images/negociod/interior/inicia/HGC_NEGOBOTONBIENVEN.png" alt="" (click)="navigate('iniciaexito')">
+    </div>
+  </div>
+  <br>
+  <div>
+    <img src="../../assets/images/negociod/interior/funciona/HGC_NEGOTITULO2.png" alt="">
+    <img src="../../assets/images/negociod/interior/funciona/HGC_NEGOIMAGEN2.jpg" alt="">
+    <div class="img-tr">
+      <img src="../../assets/images/negociod/interior/funciona/HGC_NEGOBOTONELMEJORPL.png" alt="" (click)="navigate('funciona')">
+    </div> 
+  </div>
+  <br>
+  <div>
+    <img src="../../assets/images/negociod/interior/grados/HGC_GRADOSTITULO.png" alt="">
+    <img src="../../assets/images/negociod/interior/grados/HGC_GRADOSIMG.jpg" alt="">
+    <div class="img-tr">
+      <img src="../../assets/images/negociod/interior/grados/HGC_NEGOBOTONCRECIMIENTO.png" alt="" (click)="navigate('grados')">
+    </div>
+  </div>
+  <br>
+  <br>
+  <div>
+    <img src="../../assets/images/negociod/interior/premios/HGC_REUNTITULO.png" alt="">
+    <img src="../../assets/images/negociod/interior/premios/HGC_REUNIMG.jpg" alt="">
+    <div class="img-tr">
+      <img src="../../assets/images/negociod/interior/premios/HGC_REUNBOTON.png" alt="" (click)="navigate('premios')">
+    </div>
+  </div>
+  <br>
+  <div>
+    <img src="../../assets/images/negociod/interior/negocio/HGC_NEGOTITULO5.png" alt="">
+    <img src="../../assets/images/negociod/interior/negocio/HGC_NEGOIMAGEN5.jpg" alt="">
+    <div class="img-tr">
+      <img src="../../assets/images/negociod/interior/negocio/HGC_NEGOBOTONLOMEJOR.png" alt="" (click)="navigate('escuela')">
+    </div>
+  </div>
+  <br>
+</ion-content>
+<ion-tab-bar slot="bottom">
+  <ion-tab-button (click)="navigate2('inicio')">
+    <ion-icon name="home"></ion-icon>
+  </ion-tab-button>
+  <ion-tab-button (click)="navigate2('carrito')">
+    <img *ngIf="user.tipo==2" src="../../../assets/images/rosa/FRONT/HGC_RZAPATILLA.png" style="width: 35px; max-width: 35px;" alt="">
+    <ion-icon *ngIf="user.tipo!=2" name="cart-outline"></ion-icon>
+  </ion-tab-button>
+  <ion-tab-button (click)="navigate2('busqueda')">
+    <ion-icon name="search"></ion-icon>
+  </ion-tab-button>
+  <ion-tab-button (click)="navigate2('favoritos')">
+    <ion-icon name="heart"></ion-icon>
+  </ion-tab-button>
+  <ion-tab-button (click)="letra(-1)">
+    <ion-icon name="remove-outline"></ion-icon>
+  </ion-tab-button>
+  <ion-tab-button (click)="letra(1)">
+    <ion-icon name="add-outline"></ion-icon>
+  </ion-tab-button>
+  <ion-tab-button (click)="logout()">
+    <ion-icon name="log-out"></ion-icon>
+  </ion-tab-button>
+</ion-tab-bar>

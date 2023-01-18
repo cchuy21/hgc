@@ -1,0 +1,92 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <img src="{{ img }}" alt="" width="120px">
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="user.tipo" padding class="background1">
+  <br>
+  <div>
+    <img src="../../assets/images/escuela/HGC_10ADTITULO.png" alt="">
+    <img src="../../assets/images/escuela/HGC_10AIMG.jpg" alt="">
+    <div class="img-tr">
+      <img src="../../assets/images/escuela/HGC_INVERDBOTON.png" alt="" (click)="navigate('compromiso')">
+    </div>
+  </div>
+  <br>
+  <div>
+    <img src="../../assets/images/escuela/HGC_INVERDTITULO.png" alt="">
+    <img src="../../assets/images/escuela/HGC_INVERIMG.jpg" alt="">
+    <div class="img-tr">
+      <img src="../../assets/images/escuela/HGC_INVERDBOTON.png" alt="" (click)="navigate('oportunidades')">
+    </div> 
+  </div>
+  <br>
+  <div>
+    <img src="../../assets/images/escuela/HGC_INVERDTITULO.png" alt="">
+    <img src="../../assets/images/escuela/HGC_INVERIMG.jpg" alt="">
+    <div class="img-tr">
+      <img src="../../assets/images/escuela/HGC_INVERDBOTON.png" alt="" (click)="navigate('videos')">
+    </div> 
+  </div>
+  <br>
+</ion-content>
+<ion-content *ngIf="!user.tipo" padding class="background1">
+  <br>
+  <div>
+    <img src="../../assets/images/escuela/HGC_10ATITULO.png" alt="">
+    <img src="../../assets/images/escuela/HGC_10AIMG.jpg" alt="">
+    <div class="img-tr">
+      <img src="../../assets/images/escuela/HGC_10ABOTON.png" alt="" (click)="navigate('compromiso')">
+    </div>
+  </div>
+  <br>
+  <div>
+    <img src="../../assets/images/escuela/HGC_INVERTITULO.png" alt="">
+    <img src="../../assets/images/escuela/HGC_INVERIMG.jpg" alt="">
+    <div class="img-tr">
+      <img src="../../assets/images/escuela/HGC_INVERBOTON.png" alt="" (click)="navigate('oportunidades')">
+    </div> 
+  </div>
+  <br>
+  <div>
+    <img src="../../assets/images/escuela/HGC_INVERDTITULO.png" alt="">
+    <img src="../../assets/images/escuela/HGC_INVERIMG.jpg" alt="">
+    <div class="img-tr">
+      <img src="../../assets/images/escuela/HGC_INVERDBOTON.png" alt="" (click)="navigate('videos')">
+    </div> 
+  </div>
+  <br>
+</ion-content>
+<ion-tab-bar slot="bottom">
+  <ion-tab-button (click)="navigate2('inicio')">
+    <ion-icon name="home"></ion-icon>
+  </ion-tab-button>
+  <ion-tab-button (click)="navigate2('carrito')">
+    <img *ngIf="user.tipo==2" src="../../../assets/images/rosa/FRONT/HGC_RZAPATILLA.png" style="width: 35px; max-width: 35px;" alt="">
+    <ion-icon *ngIf="user.tipo!=2" name="cart-outline"></ion-icon>
+  </ion-tab-button>
+  <ion-tab-button (click)="navigate2('busqueda')">
+    <ion-icon name="search"></ion-icon>
+  </ion-tab-button>
+  <ion-tab-button (click)="navigate2('favoritos')">
+    <ion-icon name="heart"></ion-icon>
+  </ion-tab-button>
+  <ion-tab-button (click)="letra(-1)">
+    <ion-icon name="remove-outline"></ion-icon>
+  </ion-tab-button>
+  <ion-tab-button (click)="letra(1)">
+    <ion-icon name="add-outline"></ion-icon>
+  </ion-tab-button>
+  <ion-tab-button (click)="logout()">
+    <ion-icon name="log-out"></ion-icon>
+  </ion-tab-button>
+</ion-tab-bar>

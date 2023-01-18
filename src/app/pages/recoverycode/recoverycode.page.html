@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+        Recuperar Código
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <div id="container">
+
+    <ion-text>
+      Ingresa tu correo electrónico para recuperar tu código
+    </ion-text>
+    <br><br><br>
+    <ion-item class="code">
+      <ion-label position="floating">Correo electrónico</ion-label>
+      <ion-input type="text" value="" [(ngModel)]="logindata.email"></ion-input>
+    </ion-item>
+    <br>
+    <ion-button color="dark" size="large" (click)="recovery()" class="estilo">RECUPERAR</ion-button>
+    <br><br><br><br>
+  </div>
+
+  <div id="salir">
+    <ion-button color="danger" size="medium" (click)="salir()" class="estilo">Salir</ion-button>
+  </div>
+
+  
+
+</ion-content>

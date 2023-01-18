@@ -1,0 +1,158 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-buttons slot="end">
+            <ion-menu-button autoHide="false"></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            <img src="{{ img }}" alt="" width="120px">
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+<!--ejecituva-->
+<ion-content padding class="background1">
+    <br>
+    <!--10 años HGC-->
+    <div>
+        <img [src]="'../../../assets/images/'+ngtipo+'/empresaynegocio/HGC_TD10AN.png'" alt="">
+        <img src="../../../assets/images/ejecutiva/empresaynegocio/escuela/HGC_10AIMG.jpg" alt="">
+        <div class="img-tr">
+            <img [src]="'../../../assets/images/'+ngtipo+'/empresaynegocio/fondos/HGC_10ADBOTON.png'" alt="" (click)="navigate('compromiso')">
+        </div>
+    </div>
+    <br>
+    <!--¿Quienes somos?-->
+    <div>
+        <img [src]="'../../../assets/images/'+ngtipo+'/empresaynegocio/HGC_TDQUIENESSOMO.png'" alt="">
+        <img src="../../../assets/images/ejecutiva/empresaynegocio/fondos/HGC_QUIENESOMOS.jpg" alt="">
+        <div class="img-tr">
+            <img [src]="'../../../assets/images/'+ngtipo+'/empresaynegocio/fondos/HGC_QUIENESCONOCENOS.png'" alt="" (click)="navigate('empresa')">
+        </div>
+    </div>
+    <br>
+    <!--Bienvenidos-->
+    <div>
+        <img [src]="'../../../assets/images/'+ngtipo+'/empresaynegocio/HGC_TDBIENVENI.png'" alt="">
+        <img src="../../../assets/images/ejecutiva/empresaynegocio/negocio/interior/inicia/HGC_NEGOIMAGEN1.jpg" alt="">
+        <div class="img-tr">
+            <img [src]="'../../../assets/images/'+ngtipo+'/empresaynegocio/fondos/HGC_NEGOBOTONBIENVE.png'" alt="" (click)="navigate('iniciaexito')">
+        </div>
+    </div>
+    <br>
+    <!--PLANDENEGOCIOS-->
+    <div>
+        <img [src]="'../../../assets/images/'+ngtipo+'/empresaynegocio/HGC_TDPLANEGOCI.png'" alt="">
+        <img src="../../../assets/images/ejecutiva/empresaynegocio/negocio/interior/funciona/HGC_NEGOIMAGEN2.jpg" alt="">
+        <div class="img-tr">
+            <img [src]="'../../../assets/images/'+ngtipo+'/empresaynegocio/fondos/HGC_NEGOBOTONELMEJOR.png'" alt="" (click)="navigate('funciona')">
+        </div>
+    </div>
+    <br>
+    <!--GRADOS-->
+    <div>
+        <img [src]="'../../../assets/images/'+ngtipo+'/empresaynegocio/HGC_TDGRADOS.png'" alt="">
+        <img src="../../../assets/images/ejecutiva/empresaynegocio/negocio/interior/grados/HGC_GRADOSIMG.jpg" alt="">
+        <div class="img-tr">
+            <img [src]="'../../../assets/images/'+ngtipo+'/empresaynegocio/fondos/HGC_GRADOSBOTON.png'" alt="" (click)="navigate('grados')">
+        </div>
+    </div>
+    <br>
+    <!--PREMIOS-->
+    <div>
+        <img [src]="'../../../assets/images/'+ngtipo+'/empresaynegocio/HGC_TDPREMIOSSEM.png'" alt="">
+        <img src="../../../assets/images/ejecutiva/empresaynegocio/negocio/interior/premios/HGC_REUNIMG.jpg" alt="">
+        <div class="img-tr">
+            <img [src]="'../../../assets/images/'+ngtipo+'/empresaynegocio/fondos/HGC_REUNDBOTON.png'" *ngIf="log==1" alt="" (click)="navigate('premios')">
+            <img [src]="'../../../assets/images/'+ngtipo+'/empresaynegocio/fondos/HGC_REUNDBOTON.png'" *ngIf="log==2" alt="" (click)="navigate('comocodigo')">
+        </div>
+    </div>
+    <br>
+    <!--yo soy hgc-->
+    <div>
+        <img [src]="'../../../assets/images/'+ngtipo+'/empresaynegocio/HGC_TDPLANYOHGC.png'" alt="">
+        <img src="../../../assets/images/ejecutiva/empresaynegocio/fondos/HGC_PLANYOSOYHGC.jpg" alt="">
+        <div class="img-tr">
+            <img [src]="'../../../assets/images/'+ngtipo+'/empresaynegocio/fondos/HGC_PLANYOSOYBENEFICIOS.png'" *ngIf="log==1" alt="" (click)="navigate('yosoy')">
+            <img [src]="'../../../assets/images/'+ngtipo+'/empresaynegocio/fondos/HGC_PLANYOSOYBENEFICIOS.png'" *ngIf="log==2" alt="" (click)="navigate('comocodigo')">
+        </div>
+    </div>
+    <br>
+    <!--INVERSIONES-->
+    <div>
+        <img [src]="'../../../assets/images/'+ngtipo+'/empresaynegocio/HGC_TDINVERS.png'" alt="">
+        <img src="../../../assets/images/ejecutiva/empresaynegocio/escuela/HGC_INVERIMG.jpg" alt="">
+        <div class="img-tr">
+            <img [src]="'../../../assets/images/'+ngtipo+'/empresaynegocio/fondos/HGC_INVERDBOTON.png'" alt="" *ngIf="log==1" (click)="navigate('oportunidades')">
+            <img [src]="'../../../assets/images/'+ngtipo+'/empresaynegocio/fondos/HGC_INVERDBOTON.png'" alt="" *ngIf="log==2" alt="" (click)="navigate('comocodigo')">
+        </div>
+    </div>
+    <br>
+    <!--Escuela-->
+    <div>
+        <img [src]="'../../../assets/images/'+ngtipo+'/empresaynegocio/HGC_TDESCUELANEGO.png'" alt="">
+        <img src="../../../assets/images/ejecutiva/empresaynegocio/negocio/HGC_FRONTNEGOCIO.jpg" alt="">
+        <div class="img-tr">
+            <img [src]="'../../../assets/images/'+ngtipo+'/empresaynegocio/fondos/HGC_NEGOBOTONLOMEJOR.png'" alt="" (click)="abriry()">
+        </div>
+    </div>
+    <br>
+    <!--Manual-->
+    <div>
+        <img [src]="'../../../assets/images/'+ngtipo+'/empresaynegocio/HGC_TDMANUALDISTR.png'" alt="">
+        <img src="../../../assets/images/ejecutiva/empresaynegocio/fondos/HGC_MANUALDEDISTRIBUIDOR.jpg" alt="">
+        <div class="img-tr">
+            <img [src]="'../../../assets/images/'+ngtipo+'/empresaynegocio/fondos/HGC_MANUALAMINOHACIAELEXITO.png'" *ngIf="log==1" alt="" (click)="navigate('manual')">
+            <img [src]="'../../../assets/images/'+ngtipo+'/empresaynegocio/fondos/HGC_MANUALAMINOHACIAELEXITO.png'" *ngIf="log==2" alt="" (click)="navigate('comocodigo')">
+        </div>
+    </div>
+    <br>
+    <!--codigoetica-->
+    <div>
+        <img [src]="'../../../assets/images/'+ngtipo+'/empresaynegocio/HGC_TDCODIGOET.png'" alt="">
+        <img src="../../../assets/images/ejecutiva/empresaynegocio/fondos/HGC_CODIGOETICA.jpg" alt="">
+        <div class="img-tr">
+            <img [src]="'../../../assets/images/'+ngtipo+'/empresaynegocio/fondos/HGC_CODIGOCONOCEMAS.png'" *ngIf="log==1" alt="" (click)="navigate('codigo')">
+            <img [src]="'../../../assets/images/'+ngtipo+'/empresaynegocio/fondos/HGC_CODIGOCONOCEMAS.png'" *ngIf="log==2" alt="" (click)="navigate('comocodigo')">
+        </div>
+    </div>
+    <br>
+    <!--aviso-->
+    <div>
+        <img [src]="'../../../assets/images/'+ngtipo+'/empresaynegocio/HGC_TDAVISOPRI.png'" alt="">
+        <img src="../../../assets/images/ejecutiva/empresaynegocio/fondos/HGC_AVISODEPRIVACIDAD.jpg" alt="">
+        <div class="img-tr">
+            <img [src]="'../../../assets/images/'+ngtipo+'/empresaynegocio/fondos/HGC_AVISOCLAUSULAS.png'" alt="" (click)="navigate('aviso')">
+        </div>
+    </div>
+    <br>
+</ion-content>
+<!--deportiva-->
+<ion-tab-bar slot="bottom">
+    <ion-tab-button (click)="navigate2('inicio')">
+        <ion-icon name="home"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button *ngIf="log==1" (click)="navigate2('carrito')">
+        <img *ngIf="user.tipo==2" src="../../../assets/images/rosa/FRONT/HGC_RZAPATILLA.png" style="width: 100%; max-width: 35px;" alt="">
+        <ion-icon *ngIf="user.tipo!=2" name="cart-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button *ngIf="log==1" (click)="navigate2('busqueda')">
+        <ion-icon name="search"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button *ngIf="log==1" (click)="navigate2('favoritos')">
+        <ion-icon name="heart"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button (click)="letra(-1)">
+        <ion-icon name="remove-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button (click)="letra(1)">
+        <ion-icon name="add-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button *ngIf="log" (click)="abrirlibro()">
+        <ion-icon name="book-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button *ngIf="log" (click)="logout()">
+        <ion-icon name="log-out"></ion-icon>
+    </ion-tab-button>
+</ion-tab-bar>

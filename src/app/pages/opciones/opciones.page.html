@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <img src="{{ img }}" alt="" width="120px">
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="background1">
+  <br>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <img src="../../assets/images/ejecutiva/HGC_GLOSARIOLINEA2.png" alt="" width="100%" style="float:left;margin-top: 15px;transform: rotate(180deg);">
+      </ion-col>
+      <ion-col class='title pt24'>
+        &nbsp;&nbsp;&nbsp;CARRITO&nbsp;&nbsp;&nbsp;
+      </ion-col>
+      <ion-col>
+        <img src="../../assets/images/ejecutiva/HGC_GLOSARIOLINEA2.png" alt="" width="100%" style="float:right;margin-top: 15px;">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <br><br>
+  <ion-grid>
+    <ion-list>
+      <ion-radio-group>
+        <ion-item>
+          <ion-label>Solo Enviar Pedido</ion-label>
+          <ion-radio name="tipo" (click)="radioChecked(1)" color="warning" value="1"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Tarjeta Credito/Debito</ion-label>
+          <ion-radio name="tipo" (click)="radioChecked(2)" color="warning" value="2"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Pagó OXXO</ion-label>
+          <ion-radio name="tipo" (click)="radioChecked(3)" color="warning" value="3"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+  </ion-grid>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-button fill="outline" shape="round" expand="block" >Siguiente</ion-button>
+  </ion-toolbar>
+</ion-footer>
+<!--
+<ion-footer>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button (click)="navigate2('inicio')">
+      <ion-icon name="home"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button (click)="navigate2('carrito')">
+      <ion-icon name="cart-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button (click)="navigate2('busqueda')">
+      <ion-icon name="search"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button (click)="navigate2('favoritos')">
+      <ion-icon name="heart"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button (click)="letra(-1)">
+      <ion-icon name="remove-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button (click)="letra(1)">
+      <ion-icon name="add-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button (click)="logout()">
+      <ion-icon name="log-out"></ion-icon>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-footer>-->

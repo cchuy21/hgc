@@ -1,0 +1,88 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-buttons slot="end">
+            <ion-menu-button autoHide="false"></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            <img src="{{ img }}" alt="" width="120px">
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="background1">
+    <div class="title pt18">
+        YO SOY HGC
+    </div>
+    <ion-list>
+        <ion-card>
+            <img src="../../../assets/images/ejecutiva/empresaynegocio/negocio/interior/inicia/HGC_INICIAIMG3.jpg" alt="">
+            <ion-card-header>
+                <ion-card-title class="text-b pt15">Se parte de nuestro plan yo soy hgc.</ion-card-title>
+            </ion-card-header>
+
+            <ion-card-content class="text-a pt12 ion-text-justify">
+                Este plan esta creado para los líderes con grado activo 100% comprometidos con la empresa a fin de que tengas una serie de beneficios como recompensa por tu lealtad.
+                <br>
+                <ion-card-header>
+                    <ion-card-title class="text-b pt15">BENEFICIOS</ion-card-title>
+                </ion-card-header>
+
+                <ul style="padding-left: 20px;">
+                    <li>Un seguro de vida por $500,000.00 pesos por muerte natural ó por muerte accidental, además de 25% de la suma asegurada de apoyo por cáncer.</li>
+                    <li>Un seguro de gastos médicos mayores que cubren hasta $1,000,000.00 por enfermedades o accidentes.</li>
+                    <li>Un seguro como apoyo por defunción por $35,000.00 para gastos funerarios.</li>
+                    <li>El seguro de gastos médicos mayores cubre los gastos por maternidad de la Distribuidora Independiente HGC.</li>
+                    <li>Facilidad de adquirir un auto a tu medida en la modalidad de crédito o arrendamiento, con todas las facilidades de pago, sin aval y sobretodo con el respaldo del corporativo.</li>
+                    <li>La posibilidad de heredar sus redes (en caso de fallecimiento) a un beneficiario, respetando el Código de Ética y el plan de trabajo HGC.</li>
+                    <li>Ser participante de las promociones y eventos exclusivos para los miembros del plan yo soy HGC.</li>
+                </ul>
+                <ion-card-header>
+                    <ion-card-title class="text-b pt15">CLÁUSULAS</ion-card-title>
+                </ion-card-header>
+
+                <ul class="text-b pt13">
+                    <li>Trayectoria mínima de 3 años en la empresa.</li>
+                    <li>Haber conseguido algún grado en su red.</li>
+                    <li>Mantener activo su grado y crecer, estar generando un cheque mínimo de 30,000 pesos, además de desplazar como mínimo 40 cajas y 12 frontales activos.</li>
+                    <li>Ser distribuidor exclusivo de HGC y su mercadeo en redes para nuestro corporativo.</li>
+                    <li>Trabajar exclusivamente para nuestro corporativo (en mercadeo en red).</li>
+                    <li>Ser un Líder leal, con ética y Leal al corporativo HGC y sobre todo, mostrar Ética profesional (No tener mal historial en la empresa)</li>
+                    <li>Estar dispuestos a aceptar los cambios, derechos, beneficios y obligaciones en el contrato que se hará al aceptar ser parte de este nuevo plan de nuestra organización.</li>
+                    <li>Aceptar los retos y compromisos acordados con HGC.</li>
+                    <li>Tener iniciativa y ser motor proactivo para usted y su Red.</li>
+                </ul>
+                <br />Nota: Los seguros de gastos médicos y de vida se activarán de enero a enero, cada año automáticamente, después de 12 meses ininterrumpidos cumpliendo con un mínimo de 12 frontales y 40 cajas de profundidad.
+            </ion-card-content>
+        </ion-card>
+    </ion-list>
+</ion-content>
+<ion-tab-bar slot="bottom">
+    <ion-tab-button (click)="navigate2('inicio')">
+        <ion-icon name="home"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button *ngIf="log==1" (click)="navigate2('carrito')">
+        <img *ngIf="user.tipo==2" src="../../../assets/images/rosa/FRONT/HGC_RZAPATILLA.png" style="width: 100%; max-width: 35px;" alt="">
+        <ion-icon *ngIf="user.tipo!=2" name="cart-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button *ngIf="log==1" (click)="navigate2('busqueda')">
+        <ion-icon name="search"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button *ngIf="log==1" (click)="navigate2('favoritos')">
+        <ion-icon name="heart"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button (click)="letra(-1)">
+        <ion-icon name="remove-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button (click)="letra(1)">
+        <ion-icon name="add-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button *ngIf="log" (click)="abrirlibro()">
+        <ion-icon name="book-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button *ngIf="log" (click)="logout()">
+        <ion-icon name="log-out"></ion-icon>
+    </ion-tab-button>
+</ion-tab-bar>

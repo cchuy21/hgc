@@ -1,0 +1,72 @@
+
+.title{
+    text-align: Center;
+    font-family: 'Chuck';
+}
+
+.text-a{
+    font-family: 'Other';
+    font-weight: bold;
+    text-align: center;
+}
+
+.text-b{
+    font-family: 'Other';
+    text-align: left;
+    padding-left: 10px;
+}
+
+
+.text-c{
+    font-family: 'Other';
+    text-align: justify;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-style: italic;
+    
+}
+
+.fondo{
+    background-color:#a1a1a1;
+}
+
+.img-pad{
+    align-items: center;
+}
+ion-grid, ion-col{
+    padding: 0px;
+}
+ion-col{
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.ionicn{
+    width: 100%;
+    height: 80%;
+}
+.ionicnr{
+    width: 100%;
+    height: 80%;
+    color:red;
+}
+.inptd{
+    background-color: #77f419;
+    height: 78%;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.inpte{
+    background-color: #f3d772;
+    height: 78%;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.inptr{
+    background-color: #F48DA8;
+    height: 78%;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}

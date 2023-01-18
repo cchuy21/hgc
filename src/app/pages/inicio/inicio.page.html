@@ -1,0 +1,107 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="end">
+            <ion-menu-button autoHide="end"></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            <img src="{{ img }}" alt="" width="120px">
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+<!--ejecutiva-->
+<ion-content padding class="background1">
+    <div>
+        <br>
+        <img src="../../../assets/images/ejecutiva/empresa/HGC_FRASE1.png" alt="" class="text-izq"><br>
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <img [src]="'../../../assets/images/'+ngtipo+'/HGC_GLOSARIOLINEA2.png'" alt="" width="100%" style="float:left;margin-top: 15px;transform: rotate(180deg);">
+                </ion-col>
+                <ion-col size='10' class='title pt20'>
+                    EMPRESA Y NEGOCIO HGC
+                </ion-col>
+                <ion-col>
+                    <img [src]="'../../../assets/images/'+ngtipo+'/HGC_GLOSARIOLINEA2.png'" alt="" width="100%" style="float:right;margin-top: 15px;">
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+        <div class="top-x">
+            <img src="../../../assets/images/ejecutiva/empresa/HGC_FRONTEMPRESA.jpg" alt="">
+        </div>
+        <div class="img-tr">
+            <img [src]="'../../../assets/images/'+ngtipo+'/empresa/HGC_BOTONDESCUBRENOS.png'" alt="" class="" (click)="navigate('empresaynegocio')">
+        </div>
+    </div>
+    <br>
+    <div>
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <img [src]="'../../../assets/images/'+ngtipo+'/HGC_GLOSARIOLINEA2.png'" alt="" width="100%" style="float:left;margin-top: 15px;transform: rotate(180deg);">
+                </ion-col>
+                <ion-col size='10' class='title pt20'>
+                    NUESTROS PRODUCTOS HGC
+                </ion-col>
+                <ion-col>
+                    <img [src]="'../../../assets/images/'+ngtipo+'/HGC_GLOSARIOLINEA2.png'" alt="" width="100%" style="float:right;margin-top: 15px;">
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+        <div class="top-x">
+            <img src="../../../assets/images/ejecutiva/catalogo/HGC_FRONTCATALOGO.jpg" alt="">
+        </div>
+        <div class="img-tr">
+            <img [src]="'../../../assets/images/'+ngtipo+'/catalogo/HGC_FRONTBOTONVERPROD.png'" *ngIf="log==1" alt="" (click)="navigate('menucatalogo')">
+            <img [src]="'../../../assets/images/'+ngtipo+'/catalogo/HGC_FRONTBOTONVERPROD.png'" *ngIf="log==2" alt="" (click)="navigate('comocodigo')">
+        </div>
+    </div>
+    <br>
+    <div>
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <img [src]="'../../../assets/images/'+ngtipo+'/HGC_GLOSARIOLINEA2.png'" alt="" width="100%" style="float:left;margin-top: 15px;transform: rotate(180deg);">
+                </ion-col>
+                <ion-col class='title pt24'>
+                    &nbsp;&nbsp;&nbsp;CONTACTO&nbsp;&nbsp;&nbsp;
+                </ion-col>
+                <ion-col>
+                    <img [src]="'../../../assets/images/'+ngtipo+'/HGC_GLOSARIOLINEA2.png'" alt="" width="100%" style="float:right;margin-top: 15px;">
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+        <div class="top-x">
+            <img src="../../../assets/images/ejecutiva/contacto/HGC_FRONTCONTACTO.jpg" alt="">
+        </div>
+        <div class="img-tr">
+            <img [src]="'../../../assets/images/'+ngtipo+'/HGC_BOTONDCONTACTANOS.png'" alt="" (click)="navigate('contacto')">
+        </div>
+        <br><br>
+    </div>
+</ion-content>
+<ion-tab-bar slot="bottom">
+    <ion-tab-button (click)="navigate2('inicio')">
+        <ion-icon name="home"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button *ngIf="log==1" (click)="navigate2('carrito')">
+        <img *ngIf="user.tipo==2" src="../../../assets/images/rosa/FRONT/HGC_RZAPATILLA.png" style="width: 100%; max-width: 35px;" alt="">
+        <ion-icon *ngIf="user.tipo!=2" name="cart-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button *ngIf="log==1" (click)="navigate2('busqueda')">
+        <ion-icon name="search"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button *ngIf="log==1" (click)="navigate2('favoritos')">
+        <ion-icon name="heart"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button (click)="letra(-1)">
+        <ion-icon name="remove-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button (click)="letra(1)">
+        <ion-icon name="add-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button *ngIf="log" (click)="logout()">
+        <ion-icon name="log-out"></ion-icon>
+    </ion-tab-button>
+
+</ion-tab-bar>

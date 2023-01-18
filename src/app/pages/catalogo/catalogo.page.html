@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <img src="{{ img }}" alt="" width="120px">
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="background1">
+  <br>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <img [src]="'../../../assets/images/'+ngtipo+'/HGC_GLOSARIOLINEA2.png'" alt="" width="100%" style="float:left; margin-top: 15px;transform: rotate(180deg);">
+      </ion-col>
+      <ion-col class='title pt24'>
+        &nbsp;&nbsp;&nbsp;CATEGORÍAS&nbsp;&nbsp;&nbsp;
+      </ion-col>
+      <ion-col>
+        <img [src]="'../../../assets/images/'+ngtipo+'/HGC_GLOSARIOLINEA2.png'" alt="" width="100%" style="float: right; margin-top: 15px;">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <br><br>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6" *ngFor="let c of categorias">
+        <ion-row [ngClass]="c.class2">
+          <ion-col size="12" class="fondo" (click)="navigate('productos', c.id)">
+            <img src="{{c.imagen}}">
+          </ion-col>
+        </ion-row>
+        <ion-row [ngClass]="c.class" (click)="navigate('productos', c.id)">
+          <ion-col size="12" >
+            <p class="pt13" style="margin-top: 15px;">{{ c.nombre }}</p>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-tab-bar slot="bottom">
+  <ion-tab-button (click)="navigate2('inicio')">
+    <ion-icon name="home"></ion-icon>
+  </ion-tab-button>
+  <ion-tab-button (click)="navigate2('carrito')">
+    <img *ngIf="user.tipo==2" src="../../../assets/images/rosa/FRONT/HGC_RZAPATILLA.png" style="width: 35px; max-width: 35px;" alt="">
+    <ion-icon *ngIf="user.tipo!=2" name="cart-outline"></ion-icon>
+  </ion-tab-button>
+  <ion-tab-button (click)="navigate2('busqueda')">
+    <ion-icon name="search"></ion-icon>
+  </ion-tab-button>
+  <ion-tab-button (click)="navigate2('favoritos')">
+    <ion-icon name="heart"></ion-icon>
+  </ion-tab-button>
+  <ion-tab-button (click)="letra(-1)">
+    <ion-icon name="remove-outline"></ion-icon>
+  </ion-tab-button>
+  <ion-tab-button (click)="letra(1)">
+    <ion-icon name="add-outline"></ion-icon>
+  </ion-tab-button>
+  <ion-tab-button (click)="abrirlibro()">
+    <ion-icon name="book-outline"></ion-icon>
+  </ion-tab-button>
+  <ion-tab-button (click)="logout()">
+    <ion-icon name="log-out"></ion-icon>
+  </ion-tab-button>
+</ion-tab-bar>

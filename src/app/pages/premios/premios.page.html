@@ -1,0 +1,98 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-buttons slot="end">
+            <ion-menu-button autoHide="false"></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            <img src="{{ img }}" alt="" width="120px">
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="background1">
+    <div class="title pt18">
+        REUNIÓN DE LÍDERES Y PREMIOS SEMESTRALES
+    </div>
+    <ion-list>
+        <ion-card>
+            <ion-card-header class="text-b pt16">
+                Reunión de Líderes
+            </ion-card-header>
+            <ion-card-content class="text-a pt12">
+                <img src="../../../assets/images/ejecutiva/empresaynegocio/negocio/interior/premios/HGC_REUNIONESIMG1.png" alt=""> Al obtener un grado podrás asistir como invitado especial a nuestra reunión de líderes anual que se llevara a cabo en una
+                playa paradisiaca o algún destino internacional en caso de haberlo, el cual podrá ser pagado con puntos, siempre y cuando se cumpla con las metas que se dispongan, las cuales pueden variar de acuerdo a cada evento; Este viaje puede ser
+                grupal o individual de acuerdo a lo que disponga el corporativo.<br />
+                <b>En HGC tus premios comienzan cuando tú junto a tu red (hasta el quinto nivel) desplazan 40 cajas 
+          y un mínimo de 8 frontales o o más por mes y se mantienen durante alguno de los 2 semestres ya 
+          especificados. Si eres acreedor a algún grado, este se te entregará de 1 a 6 meses después de 
+          haberlo cumplido, según el calendario de eventos que tiene la empresa para este fin<br />
+        Todos los viajes de líderes se otorgarán con los puntos verdes, como mínimo debes contar con 50% de 
+          puntos siendo negociable de otro 50%.</b><br />
+            </ion-card-content>
+        </ion-card>
+        <ion-card>
+            <ion-card-header>
+                <ion-card-title class="text-b pt15">PREMIOS SEMESTRALES</ion-card-title>
+                <img *ngIf="user.tipo!=2" src="../../../assets/images/ejecutiva/empresaynegocio/negocio/interior/inicia/HGC_REUNLINEA.png" alt="">
+                <img *ngIf="user.tipo==2" src="../../../assets/images/rosa/FRONT/HGC_RLINEAINFERIOR.png" alt="" height="5px">
+            </ion-card-header>
+            <ion-card-content class="text-a pt12">
+                HGC hace la diferencia y premia a nuestros distribuidores, si haz alcanzado el grado esmeralda, zafiro,rubí o diamantes y tu red de distribución ha crecido, puedes ganarte algunos de estos increíbles premios, que van desde motos, autos y camionetas. Deberás
+                tener previamente al menos 3 meses tu grado activo, así como cubrir el monto de cajas desplazadas junto con tu red hasta el 5º nivel por 6 meses consecutivos. <br />
+                <img src="../../../assets/images/ejecutiva/empresaynegocio/negocio/interior/premios/HGC_REUNIONESIMG2.png" alt="">
+                <img src="../../../assets/images/ejecutiva/empresaynegocio/negocio/interior/premios/HGC_REUNIONESIMG3.png" alt="">
+                <img src="../../../assets/images/ejecutiva/empresaynegocio/negocio/interior/premios/HGC_REUNIONESIMG4.png" alt="">
+                <img src="../../../assets/images/ejecutiva/empresaynegocio/negocio/interior/premios/HGC_REUNIONESIMG5.png" alt="">
+                <img src="../../../assets/images/ejecutiva/empresaynegocio/negocio/interior/premios/HGC_REUNIONESIMG6.png" alt="">
+                <img src="../../../assets/images/ejecutiva/empresaynegocio/negocio/interior/premios/HGC_REUNIONESIMG7.png" alt=""> *Modelo, color, marca y equipamiento podrán variar según existencia y criterio de la empresa. Todos los autos son de equipamiento
+                básico como primera opción. Para obtener algún premio debes iniciar en alguno de los 2 semestres del año sin excepción alguna (de 16 de enero a 15 de julio o de 16 de julio a 15 de enero) y el vehículo podrá ser entregado de 3 a 6 meses
+                después según los criterios de la empresa; la entrega de documentos según lo tenga en cuenta la empresa podrá tardar de 1 a 3 años, además de que el vehículo deberá portar publicidad de la empresa. Los regalos semestrales se otorgarán
+                siempre y cuando el distribuidor muestre un buen comportamiento ante el corporativo HGC y los distribuidores de la empresa, de no ser asi la empresa desistira de entregar estos premios a distribuidores desleales. <br />
+            </ion-card-content>
+        </ion-card>
+        <ion-card>
+            <ion-card-header>
+                <ion-card-title class="text-b pt15">RETOS HGC</ion-card-title>
+                <img *ngIf="user.tipo!=2" src="../../../assets/images/ejecutiva/empresaynegocio/negocio/interior/inicia/HGC_REUNLINEA.png" alt="">
+                <img *ngIf="user.tipo==2" src="../../../assets/images/rosa/FRONT/HGC_RLINEAINFERIOR.png" alt="" height="5px">
+            </ion-card-header>
+            <ion-card-content class="text-a pt12">
+                <img src="../../../assets/images/ejecutiva/empresaynegocio/negocio/interior/premios/HGC_REUNIONESIMG8.png" alt=""> Actívate mensualmente con 2 cajas y mantén activo tu reto<br />
+                <br />RETO CONVENCION<br /> Mantén tu reto activo del 16 de diciembre al 15 de junio y asiste gratis a la convención anual.<br />
+                <br />RETO DE FIESTA DE FIN DE AÑO<br /> Mantén tu reto activo del 16 de junio al 15 de septiembre y asiste gratis a la fiesta de fin de año HGC<br />
+                <br />RETO AGUASCALIENTES<br /> Mantén tu reto activo del 16 de septiembre al 15 de diciembre y asiste gratis a capacitarte en Aguascalientes.<br /> Ninguno de estos premios incluye el traslado ya sea aéreo o terrestre, y en su mayoría
+                solo incluye hospedaje con desayuno incluido y eventos o cenas especiales que la empresa especificará, te recordamos que los retos son individuales e intransferibles y no aplica en inversiones.<br />
+            </ion-card-content>
+        </ion-card>
+    </ion-list>
+</ion-content>
+<ion-tab-bar slot="bottom">
+    <ion-tab-button (click)="navigate2('inicio')">
+        <ion-icon name="home"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button *ngIf="log==1" (click)="navigate2('carrito')">
+        <img *ngIf="user.tipo==2" src="../../../assets/images/rosa/FRONT/HGC_RZAPATILLA.png" style="width: 100%; max-width: 35px;" alt="">
+        <ion-icon *ngIf="user.tipo!=2" name="cart-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button *ngIf="log==1" (click)="navigate2('busqueda')">
+        <ion-icon name="search"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button *ngIf="log==1" (click)="navigate2('favoritos')">
+        <ion-icon name="heart"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button (click)="letra(-1)">
+        <ion-icon name="remove-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button (click)="letra(1)">
+        <ion-icon name="add-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button *ngIf="log" (click)="abrirlibro()">
+        <ion-icon name="book-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button *ngIf="log" (click)="logout()">
+        <ion-icon name="log-out"></ion-icon>
+    </ion-tab-button>
+</ion-tab-bar>

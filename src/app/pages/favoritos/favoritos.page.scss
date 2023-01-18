@@ -1,0 +1,102 @@
+
+.title{
+    text-align: Center;
+    font-family: 'Chuck';
+}
+
+.text-a,.eje0,.eje1,.dep0,.dep1,.ros0,.ros1{
+    font-family: 'Other';
+}
+
+.text-b{
+    font-family: 'Other';
+    text-align: right;
+}
+
+.fondo{
+    background-color:#a1a1a1;
+}
+
+a.button2{
+    display:inline-block;
+    text-decoration:none;
+    font-family:'Other';
+    font-weight:400;
+    color: black;
+    text-align:center;
+
+}
+.eje0 > ion-col{
+    background: url(../../../assets/images/ejecutiva/catalogo/HGCCATEGRIA_BOTON11.png) 0 0/100% 100% no-repeat;
+    padding-left: 0;
+    text-align: center;
+}
+.eje1 > ion-col{
+    background: url(../../../assets/images/ejecutiva/catalogo/HGCCATEGRIA_BOTON21.png) 0 0/100% 100% no-repeat;
+    padding-right: 0;
+    text-align: center;
+}
+.dep0 > ion-col{
+    background: url(../../../assets/images/deportiva/catalogo/HGCCATEGRIA_BOTON1.png) 0 0/100% 100% no-repeat;
+    padding-left: 0;
+    text-align: center;
+}
+.dep1 > ion-col{
+    background: url(../../../assets/images/deportiva/catalogo/HGCCATEGRIA_BOTON2.png) 0 0/100% 100% no-repeat;
+    padding-right: 0;
+    text-align: center;
+}
+.ros0 > ion-col{
+    background: url(../../../assets/images/rosa/catalogo/HGCCATEGRIA_BOTONR1.png) 0 0/100% 100% no-repeat;
+    padding-left: 0;
+    text-align: center;
+    color: white!important;
+
+}
+.ros1 > ion-col{
+    background: url(../../../assets/images/rosa/catalogo/HGCCATEGRIA_BOTONR2.png) 0 0/100% 100% no-repeat;
+    padding-right: 0;
+    text-align: center;
+    color: white!important;
+
+}
+ion-grid, ion-col, ion-row{
+    padding-left:0px;
+    padding-right:0px;
+}
+.eje0 p, .dep0 p, .ros0 p {
+    padding-right: 5px;
+    margin: 0px!important;
+    padding-left: 25px;
+}
+.eje1 p, .dep1 p, .ros1 p  {
+    padding-left: 5px;
+    margin: 0px!important;
+    padding-right: 25px;
+
+}
+.dep1, .eje1, .ros1{
+    padding-left: 5px;
+    margin-top: 15px;
+}
+.dep0, .eje0, .ros0{
+    padding-right: 5px;
+    margin-top: 15px;
+
+}
+.rowizq{
+    padding-right: 5px;
+}
+.rowder{
+    padding-left: 5px;
+}
+.rowimg0{
+    padding-left: 20px;
+    padding-right: 5px;
+    margin-top: 30px;
+}
+.rowimg1{
+    padding-left: 5px;
+    padding-right: 20px;
+    margin-top: 30px;
+}

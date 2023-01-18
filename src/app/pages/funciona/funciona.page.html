@@ -1,0 +1,78 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-buttons slot="end">
+            <ion-menu-button autoHide="false"></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            <img src="{{ img }}" alt="" width="120px">
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="background1">
+    <div class="title pt18">
+        ¿COMO FUNCIONA EL MERCADEO EN REDES?
+    </div>
+    <ion-list>
+        <ion-card>
+            <img src="../../../assets/images/ejecutiva/empresaynegocio/negocio/interior/funciona/HGC_COMOFIMG1.jpg" alt="">
+            <ion-card-header>
+            </ion-card-header>
+            <ion-card-content class="text-a pt12 ion-text-justify">
+                Las posibilidades de crecimiento son enormes, ya que puedes ingresar tantas personas quieras; además de las que se añaden a tu red personal por la invitación de tus invitados. Podrás ganar comisiones hasta el quinto nivel, siguiendo las reglas de nuestro
+                programa de mercadeo en redes. Las reglas para hacer válido el cobro de comisiones son las siguientes: deberás ser un distribuidor activo; es decir, hacer tu compra mínima mensual de producto ($4,400.00), con esto también aseguras tu permanencia
+                como distribuidor autorizado. Al estar activo también tienes derecho a cobrar las comisiones que te generan las compras de tus invitados. Para cobrar las comisiones de tu segundo nivel (compras que generan los invitados de tus invitados);
+                deberás tener por lo menos 2 personas activas en tu primer nivel, para cobrar comisiones de tu tercer nivel deberás contar por lo menos con 3 personas activas en tu primer nivel, así también para cobrar tu cuarto nivel, cuatro personas
+                activas en tu primer nivel y para cobrar tu quinto nivel 5 personas activas en tu primer nivel.
+            </ion-card-content>
+            <ul class="text-b pt13">
+                <li>1ER NIVEL $1,155.00 26.25%</li>
+                <li>2DO NIVEL $583.00 13.25%</li>
+                <li>3ER NIVEL $176.00 4.00%</li>
+                <li>4TO NIVEL $116.60 2.65%</li>
+                <li>5TO NIVEL $58.30 1.325%</li>
+            </ul>
+        </ion-card>
+        <ion-card>
+            <ion-card-header>
+            </ion-card-header>
+            <ion-card-content class="text-a pt12 ion-text-justify">
+                Al activarte (hacer la compra de producto mensual por $4,400 + impuestos), tienes la posibilidad de invitar a otras personas a ingresar a este fabuloso negocio, para así obtener comisiones por compras que ellos hacen a la empresa. A esto se le conoce
+                como mercadeo en redes.
+                <br> PUEDES OBTENER EXCELENTES GANANCIAS, EL LIMITE NO EXISTE
+            </ion-card-content>
+            <img src="../../../assets/images/ejecutiva/empresaynegocio/negocio/interior/funciona/HGC_COMOFIMG2.png" alt="">
+        </ion-card>
+    </ion-list>
+</ion-content>
+
+<ion-tab-bar slot="bottom">
+    <ion-tab-button (click)="navigate2('inicio')">
+        <ion-icon name="home"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button *ngIf="log==1" (click)="navigate2('carrito')">
+        <img *ngIf="user.tipo==2" src="../../../assets/images/rosa/FRONT/HGC_RZAPATILLA.png" style="width: 100%; max-width: 35px;" alt="">
+        <ion-icon *ngIf="user.tipo!=2" name="cart-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button *ngIf="log==1" (click)="navigate2('busqueda')">
+        <ion-icon name="search"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button *ngIf="log==1" (click)="navigate2('favoritos')">
+        <ion-icon name="heart"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button (click)="letra(-1)">
+        <ion-icon name="remove-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button (click)="letra(1)">
+        <ion-icon name="add-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button *ngIf="log" (click)="abrirlibro()">
+        <ion-icon name="book-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button *ngIf="log" (click)="logout()">
+        <ion-icon name="log-out"></ion-icon>
+    </ion-tab-button>
+</ion-tab-bar>

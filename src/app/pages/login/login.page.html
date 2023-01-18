@@ -1,0 +1,19 @@
+<ion-content [fullscreen]="true" [ngClass]="back">
+
+    <div id="container">
+        <img src="{{ img }}" alt="" width="150px">
+        <br>
+        <ion-item class="code pt14">
+            <ion-label position="floating">Código</ion-label>
+            <ion-input type="text" value="" [(ngModel)]="codigo"></ion-input>
+        </ion-item>
+        <br>
+        <ion-button color="dark" size="large" class="estilo" (click)="login()">LOGIN</ion-button>
+        <br><br><br><br>
+        <p class="pt16"><a class="pt14" rel="noopener noreferrer" (click)="recovery()">¿Olvidó su código?</a></p><br><br />
+        <p class="pt16"><a class="pt14" rel="noopener noreferrer" (click)="navigate('registro')">¿Cómo obtener un Código?</a></p><br>
+        <img *ngIf="showe" src="../../assets/images/ejecutiva/HGC_BOTONEJECTIVO.png" width="170px" class="boton" (click)="cambiare()">
+        <img *ngIf="showd" src="../../assets/images/deportiva/HGC_BOTONDEPORT.png" width="170px" class="boton" (click)="cambiard()">
+        <img *ngIf="showr" src="../../assets/images/rosa/HGC_RBOTONROSA.png" width="170px" class="boton" (click)="cambiarr()">
+    </div>
+</ion-content>

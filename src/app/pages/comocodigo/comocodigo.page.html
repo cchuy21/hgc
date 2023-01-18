@@ -1,0 +1,50 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true" [ngClass]="back">
+    <div id="container">
+        <br>
+        <img src="../../assets/images/HGC_LOGOEJEC.png" alt="" width="120px">
+        <br>
+        <ion-grid>
+            <ion-row>
+                <ion-col class='title pt18'>
+                    ¿Cómo conseguir un Código?
+                </ion-col>
+            </ion-row>
+            <br />
+            <ion-row>
+                <ion-col size='1'></ion-col>
+                <ion-col class='title pt13 ion-text-justify'>
+                    &nbsp;&nbsp;&nbsp;&nbsp;Para Formar parte de la familia HGC es necesario adquirir tu kit de inscripción y enviar tus documentos correspondientes al correo de contratos@hgc.mx y solicitar su número de distribuidor (NUD).
+                </ion-col>
+                <ion-col size='1'></ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size='1'></ion-col>
+                <ion-col class='title pt13 ion-text-justify'>
+                    &nbsp;&nbsp;&nbsp;&nbsp;Coloca tu correo electrónico para comunicarte con nosotros y dar seguimiento a tu petición.
+                </ion-col>
+                <ion-col size='1'></ion-col>
+            </ion-row>
+            <br /><br />
+            <ion-row>
+                <ion-col>
+                    <ion-item class="code">
+                        <ion-label position="floating">Correo electrónico</ion-label>
+                        <ion-input type="email" value="" [(ngModel)]="email"></ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <ion-button fill="outline" shape="round" expand="block" (click)="enviar()">Contactar</ion-button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
+</ion-content>

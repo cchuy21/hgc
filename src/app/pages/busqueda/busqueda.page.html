@@ -1,0 +1,320 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-searchbar search-icon="undefined" [(ngModel)]="miBuscador" (search)="buscar()">
+  </ion-searchbar>
+  <ion-buttons slot="end">
+  <ion-icon (click)="buscar()" name="search"></ion-icon>
+  </ion-buttons>
+</ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="user.tipo==1" padding class="background1">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <img src="../../assets/images/ejecutiva/HGC_GLOSARIOLINEA2.png" alt="" width="100%" style="float:left;margin-top: 15px;transform: rotate(180deg);">
+      </ion-col>
+      <ion-col class='title pt21'>
+        &nbsp;&nbsp;CATÁLOGO&nbsp;&nbsp;
+      </ion-col>
+      <ion-col>
+        <img src="../../assets/images/ejecutiva/HGC_GLOSARIOLINEA2.png" alt="" width="100%" style="float:right;margin-top: 15px;">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <br><br>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6" *ngFor="let c of busqueda">
+        <ion-row [ngClass]="c.class2">
+          <ion-col size="12" class="fondo" (click)="navigate('detalles', c.id)">
+            <img src="{{c.imagen}}">
+          </ion-col>
+          <img src="../../assets/images/ejecutiva/HGC_LINEADPRODUCTOS.png" alt="">
+        </ion-row>
+        <ion-row [ngClass]="c.class" (click)="navigate('detalles', c.id)">
+          <ion-col size="12" >
+            <p class="pt13" style="margin-top: 15px;">{{ c.nombre }}&nbsp;&nbsp;&nbsp;${{c.precio_public}}</p>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <img src="../../assets/images/ejecutiva/HGC_GLOSARIOLINEA2.png" alt="" width="100%" style="float:left;margin-top: 15px;transform: rotate(180deg);">
+      </ion-col>
+      <ion-col class='title pt21'>
+        &nbsp;&nbsp;GLOSARIO&nbsp;&nbsp;
+      </ion-col>
+      <ion-col>
+        <img src="../../assets/images/ejecutiva/HGC_GLOSARIOLINEA2.png" alt="" width="100%" style="float:right;margin-top: 15px;">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-list>
+
+    <ion-card *ngFor="let gl of glosario">
+      <img src="{{gl.imagen}}" alt="">
+      <ion-card-header class="text-bglo pt15">
+        <ion-card-title class="text-bglo pt15">DESCRIPCIÓN</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content class="text-aglo pt12">
+        {{gl.definicion}}
+      </ion-card-content>
+    </ion-card>
+      <!--<div *ngFor="let gl of glosarios">
+        <img src="{{gl.imagen}}" alt="">
+        <br><br>
+      </div>-->
+  </ion-list>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <img src="../../assets/images/ejecutiva/HGC_GLOSARIOLINEA2.png" alt="" width="100%" style="float:left;margin-top: 15px;transform: rotate(180deg);">
+      </ion-col>
+      <ion-col class='title pt21'>
+        &nbsp;&nbsp;SALUD&nbsp;&nbsp;
+      </ion-col>
+      <ion-col>
+        <img src="../../assets/images/ejecutiva/HGC_GLOSARIOLINEA2.png" alt="" width="100%" style="float:right;margin-top: 15px;">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-list>
+    <ion-card *ngFor="let sl of salud">
+      <img src="{{sl.imagen}}" alt="">
+      <ion-card-header>
+        <ion-card-title class="text-bglo pt15">DESCRIPCIÓN</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content class="text-aglo pt12">
+        {{sl.definicion}}
+        <br /><br /><br />RECOMENDACIONES<br />
+        {{sl.recomendaciones}}
+
+        <br /><br />PRODUCTOS SUGERIDOS<br />
+        {{sl.producto_sugerido}}
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>
+
+<ion-content *ngIf="user.tipo==0" padding class="background1">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <img src="../../assets/images/deportiva/HGC_GLOSARIOLINEA2.png" alt="" width="100%" style="float:left;margin-top: 15px;transform: rotate(180deg);">
+      </ion-col>
+      <ion-col class='title pt21'>
+        &nbsp;&nbsp;CATÁLOGO&nbsp;&nbsp;
+      </ion-col>
+      <ion-col>
+        <img src="../../assets/images/deportiva/HGC_GLOSARIOLINEA2.png" alt="" width="100%" style="float:right;margin-top: 15px;">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <br><br>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6" *ngFor="let c of busqueda">
+        <ion-row [ngClass]="c.class2">
+          <ion-col size="12" class="fondo" (click)="navigate('detalles', c.id)">
+            <img src="{{c.imagen}}">
+          </ion-col>
+          <img src="../../assets/images/deportiva/HGC_LINEADPRODUCTOS.png" alt="">
+        </ion-row>
+        <ion-row [ngClass]="c.class" (click)="navigate('detalles', c.id)">
+          <ion-col size="12" >
+            <p class="pt13" style="margin-top: 15px;">{{ c.nombre }}&nbsp;&nbsp;&nbsp;${{c.precio_public}}</p>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <img src="../../assets/images/deportiva/HGC_GLOSARIOLINEA2.png" alt="" width="100%" style="float:left;margin-top: 15px;transform: rotate(180deg);">
+      </ion-col>
+      <ion-col class='title pt21'>
+        &nbsp;&nbsp;GLOSARIO&nbsp;&nbsp;
+      </ion-col>
+      <ion-col>
+        <img src="../../assets/images/deportiva/HGC_GLOSARIOLINEA2.png" alt="" width="100%" style="float:right;margin-top: 15px;">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-list>
+
+    <ion-card *ngFor="let gl of glosario">
+      <img src="{{gl.imagen}}" alt="">
+      <ion-card-header class="text-bglo pt15">
+        <ion-card-title class="text-bglo pt15">DESCRIPCIÓN</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content class="text-aglo pt12">
+        {{gl.definicion}}
+      </ion-card-content>
+    </ion-card>
+      <!--<div *ngFor="let gl of glosarios">
+        <img src="{{gl.imagen}}" alt="">
+        <br><br>
+      </div>-->
+  </ion-list>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <img src="../../assets/images/deportiva/HGC_GLOSARIOLINEA2.png" alt="" width="100%" style="float:left;margin-top: 15px;transform: rotate(180deg);">
+      </ion-col>
+      <ion-col class='title pt21'>
+        &nbsp;&nbsp;SALUD&nbsp;&nbsp;
+      </ion-col>
+      <ion-col>
+        <img src="../../assets/images/deportiva/HGC_GLOSARIOLINEA2.png" alt="" width="100%" style="float:right;margin-top: 15px;">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-list>
+    <ion-card *ngFor="let sl of salud">
+      <img src="{{sl.imagen}}" alt="">
+      <ion-card-header>
+        <ion-card-title class="text-bglo pt15">DESCRIPCIÓN</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content class="text-aglo pt12">
+        {{sl.definicion}}
+        <br /><br /><br />RECOMENDACIONES<br />
+        {{sl.recomendaciones}}
+
+        <br /><br />PRODUCTOS SUGERIDOS<br />
+        {{sl.producto_sugerido}}
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+  
+</ion-content>
+
+<ion-content *ngIf="user.tipo==2" padding class="background1">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <img src="../../assets/images/rosa/HGC_GLOSARIOLINEA2.png" alt="" width="100%" style="float:left;margin-top: 15px;transform: rotate(180deg);">
+      </ion-col>
+      <ion-col class='title pt21'>
+        &nbsp;&nbsp;CATÁLOGO&nbsp;&nbsp;
+      </ion-col>
+      <ion-col>
+        <img src="../../assets/images/rosa/HGC_GLOSARIOLINEA2.png" alt="" width="100%" style="float:right;margin-top: 15px;">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <br><br>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6" *ngFor="let c of busqueda">
+        <ion-row [ngClass]="c.class2">
+          <ion-col size="12" class="fondo" (click)="navigate('detalles', c.id)">
+            <img src="{{c.imagen}}">
+          </ion-col>
+          <img src="../../assets/images/rosa/HGC_LINEADPRODUCTOS.png" alt="">
+        </ion-row>
+        <ion-row [ngClass]="c.class" (click)="navigate('detalles', c.id)">
+          <ion-col size="12" >
+            <p class="pt13" style="margin-top: 15px;">{{ c.nombre }}&nbsp;&nbsp;&nbsp;${{c.precio_public}}</p>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <img src="../../assets/images/rosa/HGC_GLOSARIOLINEA2.png" alt="" width="100%" style="float:left;margin-top: 15px;transform: rotate(180deg);">
+      </ion-col>
+      <ion-col class='title pt21'>
+        &nbsp;&nbsp;GLOSARIO&nbsp;&nbsp;
+      </ion-col>
+      <ion-col>
+        <img src="../../assets/images/rosa/HGC_GLOSARIOLINEA2.png" alt="" width="100%" style="float:right;margin-top: 15px;">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-list>
+
+    <ion-card *ngFor="let gl of glosario">
+      <img src="{{gl.imagen}}" alt="">
+      <ion-card-header class="text-bglo pt15">
+        <ion-card-title class="text-bglo pt15">DESCRIPCIÓN</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content class="text-aglo pt12">
+        {{gl.definicion}}
+      </ion-card-content>
+    </ion-card>
+      <!--<div *ngFor="let gl of glosarios">
+        <img src="{{gl.imagen}}" alt="">
+        <br><br>
+      </div>-->
+  </ion-list>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <img src="../../assets/images/rosa/HGC_GLOSARIOLINEA2.png" alt="" width="100%" style="float:left;margin-top: 15px;transform: rotate(180deg);">
+      </ion-col>
+      <ion-col class='title pt21'>
+        &nbsp;&nbsp;SALUD&nbsp;&nbsp;
+      </ion-col>
+      <ion-col>
+        <img src="../../assets/images/rosa/HGC_GLOSARIOLINEA2.png" alt="" width="100%" style="float:right;margin-top: 15px;">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-list>
+    <ion-card *ngFor="let sl of salud">
+      <img src="{{sl.imagen}}" alt="">
+      <ion-card-header>
+        <ion-card-title class="text-bglo pt15">DESCRIPCIÓN</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content class="text-aglo pt12">
+        {{sl.definicion}}
+        <br /><br /><br />RECOMENDACIONES<br />
+        {{sl.recomendaciones}}
+
+        <br /><br />PRODUCTOS SUGERIDOS<br />
+        {{sl.producto_sugerido}}
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+  
+</ion-content>
+<ion-tab-bar slot="bottom">
+  <ion-tab-button (click)="navigate2('inicio')">
+    <ion-icon name="home"></ion-icon>
+  </ion-tab-button>
+  <ion-tab-button (click)="navigate2('carrito')">
+    <img *ngIf="user.tipo==2" src="../../../assets/images/rosa/FRONT/HGC_RZAPATILLA.png" style="width: 100%; max-width: 35px;" alt="">
+    <ion-icon *ngIf="user.tipo!=2" name="cart-outline"></ion-icon>
+  </ion-tab-button>
+  <ion-tab-button (click)="navigate2('busqueda')">
+    <ion-icon name="search"></ion-icon>
+  </ion-tab-button>
+  <ion-tab-button (click)="navigate2('favoritos')">
+    <ion-icon name="heart"></ion-icon>
+  </ion-tab-button>
+  <ion-tab-button (click)="letra(-1)">
+    <ion-icon name="remove-outline"></ion-icon>
+  </ion-tab-button>
+  <ion-tab-button (click)="letra(1)">
+    <ion-icon name="add-outline"></ion-icon>
+  </ion-tab-button>
+  <ion-tab-button (click)="logout()">
+    <ion-icon name="log-out"></ion-icon>
+  </ion-tab-button>
+</ion-tab-bar>

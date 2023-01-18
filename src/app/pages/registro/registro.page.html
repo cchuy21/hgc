@@ -1,0 +1,44 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-buttons slot="end">
+            <ion-menu-button autoHide="false"></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            <img src="{{ img }}" alt="" width="120px">
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="background1">
+    <br>
+    <ion-grid>
+        <ion-row>
+            <ion-col class='title pt24'>
+                Registro
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <br><br>
+    <ion-grid>
+        <ion-item>
+            <ion-label position="stacked">Nombre</ion-label>
+            <ion-input [(ngModel)]="nombre"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="stacked">Email</ion-label>
+            <ion-input [(ngModel)]="email"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="stacked">Teléfono</ion-label>
+            <ion-input minlength="10" maxlength="10" [(ngModel)]="telef"></ion-input>
+        </ion-item>
+    </ion-grid>
+</ion-content>
+<ion-footer>
+    <ion-toolbar>
+        <ion-button fill="outline" shape="round" expand="block" (click)="validar()">Registrarse</ion-button>
+    </ion-toolbar>
+</ion-footer>

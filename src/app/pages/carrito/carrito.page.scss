@@ -1,0 +1,77 @@
+
+.title{
+    text-align: Center;
+    font-family: 'Chuck';
+}
+
+.text-a,.eje0,.eje1,.dep0,.dep1,.ros0,.ros1{
+    font-family: 'Other';
+}
+
+.text-b{
+    font-family: 'Other';
+    text-align: right;
+}
+
+.fondo{
+    background-color:#a1a1a1;
+}
+
+a.button2{
+    display:inline-block;
+    text-decoration:none;
+    font-family:'Other';
+    font-weight:400;
+    color: black;
+    text-align:center;
+
+}
+.eje0{
+    background-color: #f3d772;
+    padding-left: 0;
+    text-align: center;
+}
+.eje1{
+    background-color: #f3d772;
+    padding-right: 0;
+    text-align: center;
+}
+.dep0{
+    background-color: #77f419;
+    padding-left: 0;
+    text-align: center;
+}
+.dep1{
+    background-color: #77f419;
+    padding-right: 0;
+    text-align: center;
+}
+.ros0{
+    background-color: #F48DA8;
+    padding-left: 0;
+    text-align: center;
+}
+.ros1{
+    background-color: #F48DA8;
+    padding-right: 0;
+    text-align: center;
+}
+p{
+    margin:0!important;
+    padding-top:10px;
+}
+ion-icon{
+    margin-top: 55%;
+}
+.prinrow{
+    margin-bottom:20px;
+}
+.eje1, .eje1 ion-col, .dep1, .dep1 ion-col, .ros1, .ros1 ion-col{
+    padding:0;
+}
+ion-icon.del{
+    margin-top: 100%;
+}
+ion-row{
+    text-align:center;
+}

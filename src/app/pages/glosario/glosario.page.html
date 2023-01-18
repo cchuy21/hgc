@@ -1,0 +1,86 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-buttons slot="end">
+            <ion-menu-button autoHide="false"></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            <img src="{{ img }}" alt="" width="120px">
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="background">
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <img [src]="'../../../assets/images/'+ngtipo+'/HGC_GLOSARIOLINEA2.png'" alt="" width="100%" style="float:left;margin-top: 15px;transform: rotate(180deg);">
+            </ion-col>
+            <ion-col class='title pt18'>
+                &nbsp;&nbsp;GLOSARIO&nbsp;&nbsp;
+            </ion-col>
+            <ion-col>
+                <img [src]="'../../../assets/images/'+ngtipo+'/HGC_GLOSARIOLINEA2.png'" alt="" width="100%" style="float:right;margin-top: 15px;">
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <ion-list>
+        <ng-container *ngFor="let gl of glosarios">
+            <ion-item (click)="gl.show = !gl.show">
+                <ion-label class='title pt16'>{{gl.nombre}}</ion-label>
+                <ion-card *ngIf="gl.show">
+                    <img src="{{gl.imagen}}" alt="">
+                    <ion-card-header class="text-b pt15">
+                        <ion-card-title class="text-b pt15">DESCRIPCIÓN</ion-card-title>
+                    </ion-card-header>
+                    <ion-card-content class="text-a pt12">
+                        {{gl.definicion}}
+                    </ion-card-content>
+                </ion-card>
+            </ion-item>
+            <ion-item *ngIf="gl.show">
+                <ion-card>
+                    <ion-card-header class="text-b pt15">
+                        <ion-card-title class="text-b pt15">FUENTE DE INFORMACIÓN:</ion-card-title>
+                    </ion-card-header>
+                    <ion-card-content class="text-a pt12">
+                        <a target="_BLANK" [href]="gl.link">
+                            <ion-button fill="outline" shape="round" expand="block">LINK</ion-button>
+                        </a>
+                    </ion-card-content>
+                </ion-card>
+            </ion-item>
+
+        </ng-container>
+    </ion-list>
+</ion-content>
+
+<ion-tab-bar slot="bottom">
+    <ion-tab-button (click)="navigate2('inicio')">
+        <ion-icon name="home"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button (click)="navigate2('carrito')">
+        <img *ngIf="user.tipo==2" src="../../../assets/images/rosa/FRONT/HGC_RZAPATILLA.png" style="width: 35px; max-width: 35px;" alt="">
+        <ion-icon *ngIf="user.tipo!=2" name="cart-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button (click)="navigate2('busqueda')">
+        <ion-icon name="search"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button (click)="navigate2('favoritos')">
+        <ion-icon name="heart"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button (click)="letra(-1)">
+        <ion-icon name="remove-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button (click)="letra(1)">
+        <ion-icon name="add-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button (click)="abrirlibro()">
+        <ion-icon name="book-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button (click)="logout()">
+        <ion-icon name="log-out"></ion-icon>
+    </ion-tab-button>
+</ion-tab-bar>

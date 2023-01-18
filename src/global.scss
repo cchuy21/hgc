@@ -1,0 +1,180 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+
+@font-face {
+    font-family: 'Chuck';
+    src: url('assets/fonts/akaChen.ttf');
+  }
+  @font-face {
+    font-family: 'Other';
+    src: url('assets/fonts/GandhiSans-Bold.otf');
+}
+* {
+  color:black;
+}
+ion-content.background1{
+  --background: url(assets/images/login.jpg) 0 0/100% 100% no-repeat;
+}
+ion-content.background2{
+  --background: url(assets/images/splash.jpg) 0 0/100% 100% no-repeat;
+}
+ion-content.background3{
+  --background: url(assets/images/HGC_RINICIOFONDO.jpg) 0 0/100% 100% no-repeat;
+}
+.backv{
+  background-color: #77f419;
+}
+.backa{
+  background-color: #f3d772;
+}
+:root {
+    --pt31 : 31pt;
+    --pt30 : 30pt;
+    --pt29 : 29pt;
+    --pt28 : 28pt;
+    --pt27 : 27pt;
+    --pt26 : 26pt;
+    --pt25 : 25pt;
+    --pt24 : 24pt;
+    --pt23 : 23pt;
+    --pt22 : 22pt;
+    --pt21 : 21pt;
+    --pt20 : 20pt;
+    --pt19 : 19pt;
+    --pt18 : 18pt;
+    --pt17 : 17pt;
+    --pt16 : 16pt;
+    --pt15 : 15pt;
+    --pt14 : 14pt;
+    --pt13 : 13pt;
+    --pt12 : 12pt;
+    --pt11 : 11pt;
+    --pt10 : 10pt;
+    --pt9 : 9pt;
+    --pt8 : 8pt;
+    --pt7 : 7pt;
+    --pt6 : 6pt;
+    --pt5 : 5pt;
+    --pt4 : 4pt;
+    --pt3 : 3pt;
+    --pt2 : 2pt;
+    --pt1 : 1pt;
+    }
+.pt31{
+    font-size: var(--pt31)!important;
+  }
+  .pt30{
+    font-size: var(--pt30)!important;
+  }
+  .pt29{
+    font-size: var(--pt29)!important;
+  }
+  .pt28{
+    font-size: var(--pt28)!important;
+  }
+  .pt27{
+    font-size: var(--pt27)!important;
+  }
+  .pt26{
+    font-size: var(--pt26)!important;
+  }
+  .pt25{
+    font-size: var(--pt25)!important;
+  }
+  .pt24{
+    font-size: var(--pt24)!important;
+  }
+  .pt23{
+    font-size: var(--pt23)!important;
+  }
+  .pt22{
+    font-size: var(--pt22)!important;
+  }
+  .pt21{
+    font-size: var(--pt21)!important;
+  }
+  .pt20{
+    font-size: var(--pt20)!important;
+  }
+  .pt19{
+    font-size: var(--pt19)!important;
+  }
+  .pt18{
+    font-size: var(--pt18)!important;
+  }
+  .pt17{
+    font-size: var(--pt17)!important;
+  }
+  .pt16{
+    font-size: var(--pt16)!important;
+  }
+  .pt15{
+    font-size: var(--pt15)!important;
+  }
+  .pt14{
+    font-size: var(--pt14)!important;
+  }
+  .pt13{
+    font-size: var(--pt13)!important;
+  }
+  .pt12{
+    font-size: var(--pt12)!important;
+  }
+  .pt11{
+    font-size: var(--pt11)!important;
+  }
+  .pt10{
+    font-size: var(--pt10)!important;
+  }
+  .pt9{
+    font-size: var(--pt9)!important;
+  }
+  .pt8{
+    font-size: var(--pt8)!important;
+  }
+  .pt7{
+    font-size: var(--pt7)!important;
+  }
+  .pt6{
+    font-size: var(--pt6)!important;
+  }
+  .pt5{
+    font-size: var(--pt5)!important;
+  }
+  .pt4{
+    font-size: var(--pt4)!important;
+  }
+  .pt3{
+    font-size: var(--pt3)!important;
+  }
+  .pt2{
+    font-size: var(--pt2)!important;
+  }
+  .pt1{
+    font-size: var(--pt1)!important;
+  }

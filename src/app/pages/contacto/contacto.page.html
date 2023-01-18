@@ -1,0 +1,65 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-buttons slot="end">
+            <ion-menu-button autoHide="false"></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            <img src="{{ img }}" alt="" width="120px">
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="background1">
+    <div class="title pt18">
+        <p class="text-a pt16">CONTACTO</p>
+        <p>OFICINAS CORPORATIVAS</p>
+    </div>
+    <div class="text-b pt14">
+        <p>En HGC estamos a la orden, para ayudarte con cualquier duda que tengas</p>
+        <p style="font-weight: bold;">Corporativo HGC Ags:</p>
+        <ul>
+            <li>Calle Gral. Ignacio Zaragoza 829, Zona Centro, 20000 Aguascalientes, Ags.</li>
+            <li>Tel: 449 9176540</li>
+            <li>Cel: 4492173119</li>
+        </ul>
+    </div>
+    <div id="map"></div>
+    <div class="text-b pt14">
+        <p style="font-weight: bold;">CEDIS HGC CDMX: </p>
+        <ul>
+            <li>Centro Comercial Plaza Zaragoza, Calz. Gral., Calz. Ignacio Zaragoza 1385, Tepalcates, Iztapalapa, 09210 Ciudad de México, CDMX</li>
+            <li>Tel: 55 71595137</li>
+            <li>Cel: 5518934025</li>
+        </ul>
+    </div>
+    <div id="map2"></div>
+    <br>
+    <br>
+</ion-content>
+<ion-tab-bar slot="bottom">
+    <ion-tab-button (click)="navigate2('inicio')">
+        <ion-icon name="home"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button *ngIf="log==1" (click)="navigate2('carrito')">
+        <img *ngIf="user.tipo==2" src="../../../assets/images/rosa/FRONT/HGC_RZAPATILLA.png" style="width: 100%; max-width: 35px;" alt="">
+        <ion-icon *ngIf="user.tipo!=2" name="cart-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button *ngIf="log==1" (click)="navigate2('busqueda')">
+        <ion-icon name="search"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button *ngIf="log==1" (click)="navigate2('favoritos')">
+        <ion-icon name="heart"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button (click)="letra(-1)">
+        <ion-icon name="remove-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button (click)="letra(1)">
+        <ion-icon name="add-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button *ngIf="log" (click)="logout()">
+        <ion-icon name="log-out"></ion-icon>
+    </ion-tab-button>
+</ion-tab-bar>
